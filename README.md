@@ -1,6 +1,20 @@
-<h1>Parsing PHP</h1>
+<h1>Laravel Parsing</h1>
 
 <p>Este sistema é de uso livre, o uso do web scraping pode violar os direitos autorais de alguns sites.</p>
+
+<h2>Sobre o Sistema</h2>
+<dl>
+    <dt>Laravel v6.X</dt>
+    <dd>PHP v7.2 Superior</dd>
+    <dt>MySql MariaDB 10.4.10 Superior</dt>
+    <dd>php artisan ui vue --auth</dd>
+    <dt>Instalar Node</dt>
+    <dd>npm install</dd>
+    <dt>Node em Desenvolvimento</dt>
+    <dd>npm run dev</dd>
+    <dt>DOM  PHP</dt>
+    <dd><a href="https://simplehtmldom.sourceforge.io/">simple_html_dom.php</a></dd>
+</dl>
 
 <h2>Requisitos para Bootstrap, Poppers, Jquery e Asset</h2>
 <dl>

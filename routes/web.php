@@ -12,9 +12,25 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('scraping');
 });
 
-Auth::routes();
+Route::view('/pesquisa','scraping');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::view('/lista','list');
+
+Route::post('/pesquisatitulo','ScrapingController@pesqScraping');
+
+Route::view('/singin','user_register');
+
+Route::get('lista','ScrapingController@returnData');
+
+
+// Auth::routes();
+
+//Route::get('/teste', 'HomeController@index')->name('home');
+
+Route::post('/registerUserForm','UsersController@registerUser');
+
+Route::post('/validaUserForm','UsersController@validaUser');
+

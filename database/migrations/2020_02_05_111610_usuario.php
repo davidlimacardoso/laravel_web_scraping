@@ -14,9 +14,9 @@ class Usuario extends Migration
     public function up()
     {
         Schema::create('usuario', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id','primary key auto_increment');
             $table->string('usuario','100')->unique();
-            $table->string('senha','50');
+            $table->string('senha','300');
             $table->timestamps();
         });
     }

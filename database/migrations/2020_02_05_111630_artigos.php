@@ -15,7 +15,7 @@ class Artigos extends Migration
     {
         Schema::create('artigos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('id_usuario')->unsigned();
+            $table->bigInteger('id_usuario')->unsigned();
             $table->foreign('id_usuario')->references('id')->on('usuario');
             $table->string('titulo','300');
             $table->string('link');
