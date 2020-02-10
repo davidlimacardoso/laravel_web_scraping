@@ -39,7 +39,7 @@
 
 <h2>Configurando Database no Laravel</h2>
 <dl>
-    <dt>Na pasta do projeto altere os dados do arquivo .env</dt>
+    <dt>Na pasta do projeto no diretório raiz, altere os dados do arquivo .env</dt>
     <dd>
     DB_CONNECTION=mysql<br>
     DB_HOST=127.0.0.1<br>
