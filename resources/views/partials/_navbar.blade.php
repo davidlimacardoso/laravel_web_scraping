@@ -13,4 +13,5 @@
         </li>
       </ul>
     </div>
+      <a class="d-flex float-right" href="/logout">Deslogar</a>
   </nav>

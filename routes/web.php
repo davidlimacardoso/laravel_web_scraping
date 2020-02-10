@@ -10,27 +10,39 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//PÁGINA INICIAL
 Route::get('/', function () {
-    return view('scraping');
+    return view('/access');
 });
 
-Route::view('/pesquisa','scraping');
+//PERMISSOES DA MIDDLEWARE
+Route::group(['middleware' => ['permission']], function () {
+    //
+    //ROTA PÁGINA DE PESQUISA
+    Route::view('/pesquisa','scraping');
 
-Route::view('/lista','list');
+    //ROTA PÁGINA LISTA
+    Route::view('/lista','list');
+});
 
+
+//FORMULÁRIO DE PESQUISA
 Route::post('/pesquisatitulo','ScrapingController@pesqScraping');
 
-Route::view('/singin','user_register');
+//PÁGINA ACESSO
+Route::view('/sign','access');
 
+//FORMULARIO LISTA
 Route::get('lista','ScrapingController@returnData');
 
-
-// Auth::routes();
-
-//Route::get('/teste', 'HomeController@index')->name('home');
-
+//FORMULARIO REGISTRAR USUÁRIO
 Route::post('/registerUserForm','UsersController@registerUser');
 
-Route::post('/validaUserForm','UsersController@validaUser');
+//FOMRULÁRIO VALIDA ACESSO
+Route::get('/validaUserForm','UsersController@validaUser');
+
+Route::get('/logout','UsersController@getSignOut');
+
+
+
 

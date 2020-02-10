@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Artigos extends Migration
+class CreateTables extends Migration
 {
     /**
      * Run the migrations.
@@ -13,6 +13,13 @@ class Artigos extends Migration
      */
     public function up()
     {
+        Schema::create('usuario', function (Blueprint $table) {
+            $table->bigIncrements('id','primary key auto_increment');
+            $table->string('usuario','100')->unique();
+            $table->string('senha','300');
+         $table->timestamps();
+        });
+
         Schema::create('artigos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('id_usuario')->unsigned();
@@ -30,6 +37,6 @@ class Artigos extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artigos');
+        Schema::dropIfExists('tabelas');
     }
 }

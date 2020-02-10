@@ -43,9 +43,6 @@ class ScrapingController extends Controller
 
                         $title[$i] = $dataTitle->plaintext;
                         $url[$i] = $dataUrl->href;
-
-
-
                     }
 
                     try{

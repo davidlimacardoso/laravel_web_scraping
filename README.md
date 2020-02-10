@@ -28,26 +28,33 @@
     <dd>npm run dev</dd>
 </dl>
 
-<h2>Configurando Database</h2>
+<h2>Criar o Database MySQL</h2>
 <dl>
-    <dt>Alterar informações no arquivo .env</dt>
+    <dt>Acesse seu terminal mysql ou Workbench MySQL</dt>
+    <dt>Crie o banco de dados</dt>
     <dd>
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=db_ScrapingTest
-    DB_USERNAME=root
-    DB_PASSWORD=
+    CREATE DATABASE db_ScrapingTest;
     </dd>
 </dl>
 
-<h2>Confgurando Migration</h2>
+<h2>Configurando Database no Laravel</h2>
 <dl>
-    <dt>Criar Tabela Usuário</dt>
-    <dd>php artisan make:migration usuario --create=usuario </dd>
-    <dt>Criar Tabela Artigos</dt>
-    <dd>php artisan make:migration artigos --create=artigos </dd>
-    <dt>Rodar Migrations</dt>
+    <dt>Na pasta do projeto altere os dados do arquivo .env</dt>
+    <dd>
+    DB_CONNECTION=mysql<br>
+    DB_HOST=127.0.0.1<br>
+    DB_PORT=3306<br>
+    DB_DATABASE=db_ScrapingTest<br>
+    DB_USERNAME=root<br>
+    DB_PASSWORD=<br>
+    </dd>
+</dl>
+
+<h2>Configurando Migration</h2>
+<dl>
+    <dt>Acessar o diretório do projeto pelo terminal</dt>
+    <dd>Ex: C:\Users\usuario\Desktop\Pasta_do_Projeto</dd>
+    <dt>Rodar o comando Migrations</dt>
     <dd>php artisan migrate</dd>
 </dl>
 

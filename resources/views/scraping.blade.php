@@ -8,6 +8,8 @@
 @section('body-content')
 
     <div class="container mt-5">
+    <h4>Bem vindo {{ session()->get('user') }}.</h4>
+
     <!--ALERT-->
         @include('partials/_msg')
 
